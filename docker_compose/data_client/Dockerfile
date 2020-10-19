@@ -18,7 +18,7 @@ RUN update-alternatives --install /usr/bin/python3 python3.9 /usr/bin/python3.9 
 RUN pip3 install pipenv
 
 # Import the GPG key and add the PostgreSQL 12 repository to our Ubuntu machine
-RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 # Add the PostgreSQL apt repository to the system in accordance with the above operating system. 
 # They are offered on the official PostgreSQL website with the following command
