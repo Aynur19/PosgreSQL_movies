@@ -12,7 +12,7 @@ RUN apt-get install -y curl nano python3-pip python3.9 python3.9-dev wget
 
 # Set up alternate paths for installing Python 3.9 packages with priority. 
 # In this case, the lowest priority (0)
-RUN update-alternatives --install /usr/bin/python3 python3.6 /usr/bin/python3.6 0
+RUN update-alternatives --install /usr/bin/python3 python3.9 /usr/bin/python3.9 0
 
 # Set the tool for controlling the working environment in Python
 RUN pip3 install pipenv
