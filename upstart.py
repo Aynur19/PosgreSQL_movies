@@ -22,6 +22,8 @@ if __name__ == '__main__':
         sh_command = f'{docker_compose} {args.scenario}'
     elif args.scenario == 'service':
         sh_command = f'{docker_compose} run -d -p 5001:5000 {docker_compose_postfix} {args.scenario}'
+    elif args.scenario == 'docker_nocache':
+        sh_command = f'{docker_compose} build --no-cache {MAIN_SERVICE_NAME}'
     elif args.scenario == 'docker':
         sh_command = f'{docker_compose} build {MAIN_SERVICE_NAME}'
     else:
