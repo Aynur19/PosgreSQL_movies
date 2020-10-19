@@ -1,3 +1,4 @@
+#!/bin/bash -e
 
 case "$1" in
     load)
